@@ -1,7 +1,7 @@
 {
-      "name": "iwyn-joseph-portfolio",
+      "name": "iwyns-portfolio",
       "version": "0.1.0",
-      "homepage": "https://iwyn-joseph.github.io/iwyn-joseph-portfolio",
+      "homepage": "https://iwyn-joseph.github.io/iwyns-portfolio",
       "private": true,
       "dependencies": {
             "@emailjs/browser": "^4.4.1",

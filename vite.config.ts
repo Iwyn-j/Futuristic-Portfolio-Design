@@ -53,7 +53,7 @@
       target: 'esnext',
       outDir: 'dist',
     },
-    base: '/iwyn-joseph-portfolio/',
+    base: process.env.NODE_ENV === 'production' ? '/iwyns-portfolio/' : '/',
     server: {
       port: 3000,
       open: true,

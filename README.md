@@ -4,7 +4,7 @@ A modern, responsive portfolio website showcasing my work as a Data Driven Devel
 
 ## 🚀 Live Demo
 
-Visit the live portfolio: [https://iwyn-joseph.github.io/iwyn-joseph-portfolio](https://iwyn-joseph.github.io/iwyn-joseph-portfolio)
+Visit the live portfolio: [https://iwyn-joseph.github.io/iwyns-portfolio](https://iwyn-joseph.github.io/iwyns-portfolio)
 
 ## ✨ Features
 
@@ -60,8 +60,8 @@ src/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/iwyn-joseph/iwyn-joseph-portfolio.git
-cd iwyn-joseph-portfolio
+git clone https://github.com/iwyn-joseph/iwyns-portfolio.git
+cd iwyns-portfolio
 ```
 
 2. Install dependencies:
@@ -102,7 +102,7 @@ export const EMAILJS_CONFIG = {
 
 ## 🚀 Deployment
 
-This project is automatically deployed to GitHub Pages using GitHub Actions. 
+This project is automatically deployed to GitHub Pages using GitHub Actions when you push to the main branch. 
 
 ### Manual Deployment
 ```bash
