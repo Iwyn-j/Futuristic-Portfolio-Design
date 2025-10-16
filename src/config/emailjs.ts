@@ -3,14 +3,14 @@
 // Sign up at https://www.emailjs.com/ to get these values
 
 export const EMAILJS_CONFIG = {
-  // Replace with your EmailJS service ID
-  SERVICE_ID: 'your_service_id',
+  // Your EmailJS service ID
+  SERVICE_ID: 'service_lqrwszf',
   
-  // Replace with your EmailJS template ID  
-  TEMPLATE_ID: 'your_template_id',
+  // Replace with your EmailJS template ID (create this next)
+  TEMPLATE_ID: 'template_q255le7',
   
-  // Replace with your EmailJS public key
-  PUBLIC_KEY: 'your_public_key'
+  // Replace with your EmailJS public key (get this from your EmailJS account)
+  PUBLIC_KEY: 'YQHwWv0GQCHVMXdEC'
 };
 
 // EmailJS template parameters

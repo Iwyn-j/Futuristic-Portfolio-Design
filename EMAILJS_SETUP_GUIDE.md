@@ -30,7 +30,7 @@ Message:
 {{message}}
 
 ---
-This email was sent from your portfolio contact form.
+This email was sent from Iwyn Joseph's portfolio contact form.
 ```
 
 4. Save the template and note down your **Template ID**
