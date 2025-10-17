@@ -98,7 +98,7 @@ export function ExperienceSection() {
             Professional Experience
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A journey through various domains of computer science, from web development to AI and cybersecurity
+            A journey through various domains of computer science, from web development to AI and data science
           </p>
         </motion.div>
 

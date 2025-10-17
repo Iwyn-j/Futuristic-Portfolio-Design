@@ -13,12 +13,9 @@ export function HeroSection() {
   };
 
   const downloadCV = () => {
-    const link = document.createElement('a');
-    link.href = '/Iwyn_Joseph_CV.pdf';
-    link.download = 'Iwyn_Joseph_CV.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    const url = '/Iwyn_Joseph_CV.pdf';
+    // On mobile browsers, opening in a new tab is more reliable than programmatic download
+    window.open(url, '_blank');
   };
 
   return (
@@ -48,6 +45,7 @@ export function HeroSection() {
                   <ImageWithFallback
                     src="/IMG_1041.JPG"
                     alt="Iwyn Joseph"
+                    loading="eager"
                     className="w-full h-full object-cover rounded-full object-[center_30%]"
                   />
                 </div>

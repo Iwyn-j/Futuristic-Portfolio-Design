@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Github, ExternalLink, Filter } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
@@ -6,7 +6,7 @@ import { Badge } from './ui/badge';
 import { Button } from './ui/button';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
-const sectors = ['All', 'Web Development', 'Machine Learning', 'Cybersecurity', 'Mobile Development', 'Data Science'];
+const sectors = ['All', 'Web Development', 'Machine Learning', 'Data Science', 'Mobile Development'];
 
 const projects = [
   {
@@ -58,7 +58,7 @@ const projects = [
     teamSize: 'Solo Project',
     image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1080&h=720&fit=crop&crop=center&auto=format&q=80',
     technologies: ['Python', 'Image Processing', 'GUI Development', 'PSNR Analysis', 'BER Metrics', 'OpenCV', 'NumPy', 'Matplotlib'],
-    sector: 'Cybersecurity',
+    sector: 'Data Science',
     githubUrl: '#',
     liveUrl: '#',
     featured: true
@@ -347,7 +347,7 @@ export function ProjectsSection() {
                       <CardTitle className="text-lg">{project.title}</CardTitle>
                       <Badge variant="outline" className="text-xs">{project.sector}</Badge>
                     </div>
-                    <CardDescription className="text-sm line-clamp-2 mb-3">
+                    <CardDescription className="text-sm mb-3">
                       {project.description}
                     </CardDescription>
                     
