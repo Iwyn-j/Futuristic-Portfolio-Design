@@ -20,4 +20,5 @@ export interface EmailTemplateParams {
   subject: string;
   message: string;
   to_email?: string; // Optional: if you want to specify recipient
+  reply_to?: string; // Optional: used by some EmailJS templates for reply address
 }

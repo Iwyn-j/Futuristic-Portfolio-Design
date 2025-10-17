@@ -196,6 +196,15 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* Respect reduced motion preference globally */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* Mobile-specific improvements */
 @media (max-width: 768px) {
   /* Improve touch targets */

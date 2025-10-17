@@ -15,7 +15,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-      <div className="w-full max-w-6xl mx-auto px-2 sm:px-4">
+      <div className="w-full max-w-6xl mx-auto px-2 sm:px-4 pt-16 sm:pt-20">
         <Header />
         <main>
           <HeroSection />

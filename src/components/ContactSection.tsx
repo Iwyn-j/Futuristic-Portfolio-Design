@@ -72,15 +72,13 @@ export function ContactSection() {
         throw new Error('EmailJS not configured. Please update the configuration in src/config/emailjs.ts');
       }
 
-      // Initialize EmailJS
-      emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
-
       // Prepare template parameters
       const templateParams: EmailTemplateParams = {
         from_name: `${formData.firstName} ${formData.lastName}`,
         from_email: formData.email,
         subject: formData.subject,
         message: formData.message,
+        reply_to: formData.email,
         to_email: 'Iwyn2002@gmail.com' // Your email address
       };
 
@@ -88,7 +86,8 @@ export function ContactSection() {
       const response = await emailjs.send(
         EMAILJS_CONFIG.SERVICE_ID,
         EMAILJS_CONFIG.TEMPLATE_ID,
-        templateParams
+        templateParams,
+        EMAILJS_CONFIG.PUBLIC_KEY
       );
 
       if (response.status === 200) {
