@@ -9,7 +9,7 @@ const experiences = [
     company: 'Flydubai',
     position: 'Data Analytics Intern – Internal Audit Department',
     location: 'Dubai, UAE',
-    duration: '[Month Year – Present]',
+    duration: 'Sep 2025 – Present',
     description: 'Built analytics solutions to support internal audit investigations and executive reporting. Automated ETL processes, centralized data from Oracle sources, and delivered stakeholder-ready dashboards that surfaced operational risks and financial gaps.',
     technologies: ['KNIME', 'Oracle SQL', 'Tableau', 'Python', 'ETL Pipelines', 'Data Modeling'],
     achievements: [
