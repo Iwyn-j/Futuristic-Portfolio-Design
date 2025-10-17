@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { ChevronDown, Github, Linkedin, Mail, MapPin, Calendar } from 'lucide-react';
 import { Button } from './ui/button';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import profileImage from '@/assets/IMG_1041.JPG';
 import { FuturisticBackground } from './FuturisticBackground';
 
 export function HeroSection() {
@@ -43,9 +44,11 @@ export function HeroSection() {
               <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full p-1">
                   <ImageWithFallback
-                    src="/IMG_1041.JPG"
+                    src={profileImage}
                     alt="Iwyn Joseph"
                     loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
                     className="w-full h-full object-cover rounded-full object-[center_30%]"
                   />
                 </div>
