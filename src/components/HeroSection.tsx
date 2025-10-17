@@ -35,13 +35,33 @@ export function HeroSection() {
             className="flex flex-col items-center lg:items-start"
           >
             {/* Profile Image */}
+            {/* Mobile: simple circular avatar for reliability */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.35, delay: 0.15 }}
+              className="mb-6 mt-8 block sm:hidden"
+            >
+              <div className="w-36 h-36 rounded-full overflow-hidden border border-border shadow-md mx-auto">
+                <ImageWithFallback
+                  src={profileImage}
+                  alt="Iwyn Joseph"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </motion.div>
+
+            {/* Tablet/Desktop: original styled avatar */}
             <motion.div
               initial={{ opacity: 0, scale: 0.92 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="relative mb-6 mt-8"
+              className="relative mb-6 mt-8 hidden sm:block"
             >
-              <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56">
+              <div className="relative w-48 h-48 md:w-56 md:h-56">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full p-1">
                   <ImageWithFallback
                     src={profileImage}
@@ -49,10 +69,10 @@ export function HeroSection() {
                     loading="eager"
                     fetchPriority="high"
                     decoding="async"
-                    className="w-full h-full object-cover rounded-full object-[center_30%]"
+                    className="w-full h-full object-cover rounded-full"
                   />
                 </div>
-                
+
                 {/* Status indicator */}
                 <motion.div
                   initial={{ scale: 0 }}
