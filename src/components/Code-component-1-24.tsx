@@ -38,7 +38,7 @@ const experiences = [
     position: 'Security Software Developer',
     location: 'Austin, TX',
     duration: '2018 - 2020',
-    description: 'Designed and implemented cybersecurity solutions including threat detection systems and secure authentication protocols. Conducted security audits and vulnerability assessments.',
+    description: 'Designed and implemented security engineering solutions including threat detection systems and secure authentication protocols. Conducted security audits and vulnerability assessments.',
     technologies: ['C++', 'Java', 'Python', 'OpenSSL', 'Wireshark', 'Linux'],
     achievements: [
       'Developed intrusion detection system with 99.5% accuracy',
@@ -77,7 +77,7 @@ export function ExperienceSection() {
             Professional Experience
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A journey through various domains of computer science, from web development to AI and cybersecurity
+            A journey through various domains of computer science, from web development to AI and security engineering
           </p>
         </motion.div>
 

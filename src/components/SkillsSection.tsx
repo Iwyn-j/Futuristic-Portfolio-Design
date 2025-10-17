@@ -264,7 +264,7 @@ export function SkillsSection() {
                   { label: 'Full Stack Development', percentage: 95 },
                   { label: 'Machine Learning', percentage: 88 },
                   { label: 'DevOps & Cloud', percentage: 85 },
-                  { label: 'Cybersecurity', percentage: 82 },
+                  { label: 'Systems Reliability', percentage: 82 },
                   { label: 'Mobile Development', percentage: 80 },
                   { label: 'Data Science', percentage: 87 }
                 ].map((item, index) => (

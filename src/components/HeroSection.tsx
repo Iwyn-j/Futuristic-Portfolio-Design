@@ -34,35 +34,15 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="flex flex-col items-center lg:items-start"
           >
-            {/* Profile Image */}
-            {/* Mobile: simple circular avatar for reliability */}
+            {/* Profile Image: single element with responsive sizes to ensure perfect circle */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.35, delay: 0.15 }}
-              className="mb-6 mt-8 block sm:hidden"
+              className="mb-6 mt-16 sm:mt-8"
             >
-              <div className="w-36 h-36 rounded-full overflow-hidden border border-border shadow-md mx-auto">
-                <ImageWithFallback
-                  src={profileImage}
-                  alt="Iwyn Joseph"
-                  loading="eager"
-                  fetchPriority="high"
-                  decoding="async"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </motion.div>
-
-            {/* Tablet/Desktop: original styled avatar */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.92 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="relative mb-6 mt-8 hidden sm:block"
-            >
-              <div className="relative w-48 h-48 md:w-56 md:h-56">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full p-1">
+              <div className="relative mx-auto">
+                <div className="w-[88px] h-[88px] sm:w-48 sm:h-48 md:w-56 md:h-56 aspect-square shrink-0 rounded-full overflow-hidden border border-border shadow-md" style={{ clipPath: 'circle(50% at 50% 50%)' }}>
                   <ImageWithFallback
                     src={profileImage}
                     alt="Iwyn Joseph"
@@ -72,13 +52,12 @@ export function HeroSection() {
                     className="w-full h-full object-cover rounded-full"
                   />
                 </div>
-
-                {/* Status indicator */}
+                {/* Status indicator visible on tablet/desktop only */}
                 <motion.div
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ delay: 0.6, duration: 0.3 }}
-                  className="absolute bottom-4 right-4 w-6 h-6 bg-green-500 border-4 border-background rounded-full"
+                  className="hidden sm:block absolute bottom-2 right-2 sm:bottom-4 sm:right-4 w-4 h-4 sm:w-6 sm:h-6 bg-green-500 border-2 sm:border-4 border-background rounded-full"
                 >
                   <div className="w-full h-full bg-green-500 rounded-full animate-pulse" />
                 </motion.div>
@@ -137,7 +116,7 @@ export function HeroSection() {
               transition={{ delay: 0.35, duration: 0.4 }}
               className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-6 text-foreground/90 text-center lg:text-left"
             >
-              Data Driven Developer & Full Stack Developer
+              Data Driven Developer
             </motion.h2>
 
             {/* Description */}

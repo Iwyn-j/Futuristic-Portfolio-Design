@@ -5,6 +5,22 @@ import { Badge } from './ui/badge';
 
 const experiences = [
   {
+    id: 0,
+    company: 'Flydubai',
+    position: 'Data Analytics Intern – Internal Audit Department',
+    location: 'Dubai, UAE',
+    duration: '[Month Year – Present]',
+    description: 'Built analytics solutions to support internal audit investigations and executive reporting. Automated ETL processes, centralized data from Oracle sources, and delivered stakeholder-ready dashboards that surfaced operational risks and financial gaps.',
+    technologies: ['KNIME', 'Oracle SQL', 'Tableau', 'Python', 'ETL Pipelines', 'Data Modeling'],
+    achievements: [
+      'Developed dynamic ETL pipelines in KNIME to clean/transform aviation audit data, cutting manual prep and improving workflow reliability',
+      'Queried and validated millions of rows from Oracle databases using SQL for audit testing and reconciliations',
+      'Designed and published interactive Tableau dashboards for non-technical stakeholders to visualize audit findings and financial insights',
+      'Partnered with internal audit to craft data stories that revealed a major revenue gap, contributing to substantial cost savings',
+      'Established data quality checks and documentation improving audit reproducibility and governance'
+    ]
+  },
+  {
     id: 1,
     company: 'Saudi Water Authority (SWA)',
     position: 'Full-Stack Developer & Data Science Consultant',

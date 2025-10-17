@@ -55,7 +55,7 @@ export function HeroSection() {
             transition={{ delay: 0.2, duration: 0.8 }}
             className="text-5xl md:text-7xl mb-6 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent"
           >
-            Full Stack Developer
+            Data Driven Developer
           </motion.h1>
 
           <motion.p
@@ -65,7 +65,7 @@ export function HeroSection() {
             className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto"
           >
             Crafting innovative solutions across multiple domains of computer science. 
-            From AI and machine learning to web development and cybersecurity.
+            From AI and machine learning to web development and cloud technologies.
           </motion.p>
 
           <motion.div

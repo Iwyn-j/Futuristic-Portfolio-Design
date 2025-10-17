@@ -6,7 +6,7 @@ import { Badge } from './ui/badge';
 import { Button } from './ui/button';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
-const sectors = ['All', 'Web Development', 'Machine Learning', 'Cybersecurity', 'Mobile Development', 'Data Science'];
+const sectors = ['All', 'Web Development', 'Machine Learning', 'Security', 'Mobile Development', 'Data Science'];
 
 const projects = [
   {
@@ -26,7 +26,7 @@ const projects = [
     description: 'End-to-end encrypted messaging platform with advanced security features including zero-knowledge architecture and secure key exchange protocols.',
     image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500',
     technologies: ['React Native', 'Node.js', 'WebRTC', 'OpenSSL', 'Redis'],
-    sector: 'Cybersecurity',
+    sector: 'Security',
     githubUrl: '#',
     liveUrl: '#',
     featured: true
@@ -67,10 +67,10 @@ const projects = [
   {
     id: 6,
     title: 'Network Intrusion Detection System',
-    description: 'Advanced cybersecurity tool that monitors network traffic patterns and uses machine learning to detect potential security threats in real-time.',
+    description: 'Advanced security tool that monitors network traffic patterns and uses machine learning to detect potential threats in real-time.',
     image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=500',
     technologies: ['Python', 'Scikit-learn', 'Wireshark', 'Linux', 'C++'],
-    sector: 'Cybersecurity',
+    sector: 'Security',
     githubUrl: '#',
     liveUrl: '#',
     featured: false
