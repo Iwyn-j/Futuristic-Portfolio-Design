@@ -53,7 +53,7 @@
       target: 'esnext',
       outDir: 'dist',
     },
-    base: '/iwyns-portfolio/',
+    base: '/',
     server: {
       port: 3000,
       open: true,
