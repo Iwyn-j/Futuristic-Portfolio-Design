@@ -14,19 +14,21 @@ export function HeroSection() {
   };
 
   const downloadCV = async () => {
-    const url = '/Iwyn_Joseph_CV.pdf';
+    // Google Drive shareable link
+    const googleDriveUrl = 'https://drive.google.com/file/d/1h1mqZr4qqgXlFGZU7TgyeA8bacBpja4i/view?usp=sharing';
+    const directDownloadUrl = 'https://drive.google.com/uc?export=download&id=1h1mqZr4qqgXlFGZU7TgyeA8bacBpja4i';
     
     try {
       // For mobile devices, open in new tab for viewing
       if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        window.open(url, '_blank');
+        window.open(googleDriveUrl, '_blank');
         return;
       }
       
-      // Desktop: try to fetch and download
-      const response = await fetch(url);
+      // Desktop: try to download directly from Google Drive
+      const response = await fetch(directDownloadUrl);
       if (!response.ok) {
-        throw new Error('Failed to fetch PDF');
+        throw new Error('Failed to fetch PDF from Google Drive');
       }
       
       const blob = await response.blob();
@@ -44,7 +46,7 @@ export function HeroSection() {
     } catch (error) {
       console.error('Download failed:', error);
       // Fallback: open in new tab
-      window.open(url, '_blank');
+      window.open(googleDriveUrl, '_blank');
     }
   };
 
@@ -184,7 +186,7 @@ export function HeroSection() {
               </Button>
               {/* Direct PDF link for mobile */}
               <a 
-                href="/Iwyn_Joseph_CV.pdf" 
+                href="https://drive.google.com/file/d/1h1mqZr4qqgXlFGZU7TgyeA8bacBpja4i/view?usp=sharing" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="sm:hidden w-full h-12 px-8 border-2 border-border hover:bg-accent/50 transition-all duration-300 rounded-lg flex items-center justify-center text-sm font-medium"
