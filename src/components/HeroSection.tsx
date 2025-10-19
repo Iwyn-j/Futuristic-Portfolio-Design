@@ -73,7 +73,7 @@ export function HeroSection() {
               className="mb-6 mt-16 sm:mt-8"
             >
               <div className="relative mx-auto">
-                <div className="w-[88px] h-[88px] sm:w-48 sm:h-48 md:w-56 md:h-56 aspect-square shrink-0 rounded-full overflow-hidden border border-border shadow-md" style={{ clipPath: 'circle(50% at 50% 50%)' }}>
+                <div className="w-[60px] h-[60px] sm:w-48 sm:h-48 md:w-56 md:h-56 aspect-square shrink-0 rounded-full overflow-hidden border border-border shadow-md" style={{ clipPath: 'circle(50% at 50% 50%)' }}>
                   <ImageWithFallback
                     src={profileImage}
                     alt="Iwyn Joseph"
