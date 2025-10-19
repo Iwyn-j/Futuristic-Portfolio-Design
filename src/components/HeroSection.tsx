@@ -13,10 +13,39 @@ export function HeroSection() {
     }
   };
 
-  const downloadCV = () => {
+  const downloadCV = async () => {
     const url = '/Iwyn_Joseph_CV.pdf';
-    // On mobile browsers, opening in a new tab is more reliable than programmatic download
-    window.open(url, '_blank');
+    
+    try {
+      // For mobile devices, open in new tab for viewing
+      if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        window.open(url, '_blank');
+        return;
+      }
+      
+      // Desktop: try to fetch and download
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error('Failed to fetch PDF');
+      }
+      
+      const blob = await response.blob();
+      const downloadUrl = window.URL.createObjectURL(blob);
+      
+      const link = document.createElement('a');
+      link.href = downloadUrl;
+      link.download = 'Iwyn_Joseph_CV.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      
+      // Clean up the object URL
+      window.URL.revokeObjectURL(downloadUrl);
+    } catch (error) {
+      console.error('Download failed:', error);
+      // Fallback: open in new tab
+      window.open(url, '_blank');
+    }
   };
 
   return (
@@ -153,6 +182,15 @@ export function HeroSection() {
               >
                 Download CV
               </Button>
+              {/* Direct PDF link for mobile */}
+              <a 
+                href="/Iwyn_Joseph_CV.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="sm:hidden w-full h-12 px-8 border-2 border-border hover:bg-accent/50 transition-all duration-300 rounded-lg flex items-center justify-center text-sm font-medium"
+              >
+                View CV
+              </a>
             </motion.div>
 
             {/* Social Links */}
