@@ -65,22 +65,19 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="flex flex-col items-center lg:items-start"
           >
-            {/* Profile Image: single element with responsive sizes to ensure perfect circle */}
+            {/* Profile Image: hidden on mobile, visible on larger screens */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.35, delay: 0.15 }}
-              className="mb-6 mt-16 sm:mt-8"
+              className="mb-6 mt-12 sm:mt-8 hidden sm:block"
             >
               <div className="relative mx-auto">
-                <div className="w-[72px] h-[72px] sm:w-48 sm:h-48 md:w-56 md:h-56 aspect-square shrink-0 rounded-full overflow-hidden border border-border shadow-md" style={{ clipPath: 'circle(50% at 50% 50%)' }}>
-                  <ImageWithFallback
+                <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border border-border shadow-md">
+                  <img
                     src={profileImage}
                     alt="Iwyn Joseph"
-                    loading="eager"
-                    fetchPriority="high"
-                    decoding="async"
-                    className="w-full h-full object-cover rounded-full"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 {/* Status indicator visible on tablet/desktop only */}
@@ -88,7 +85,7 @@ export function HeroSection() {
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ delay: 0.6, duration: 0.3 }}
-                  className="hidden sm:block absolute bottom-2 right-2 sm:bottom-4 sm:right-4 w-4 h-4 sm:w-6 sm:h-6 bg-green-500 border-2 sm:border-4 border-background rounded-full"
+                  className="absolute bottom-4 right-4 w-6 h-6 bg-green-500 border-4 border-background rounded-full"
                 >
                   <div className="w-full h-full bg-green-500 rounded-full animate-pulse" />
                 </motion.div>

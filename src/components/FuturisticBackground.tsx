@@ -4,21 +4,21 @@ export function FuturisticBackground() {
   return (
     <div className="absolute inset-0 overflow-hidden">
       {/* Base gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-accent/40" />
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-accent/25" />
       
       {/* Animated particles/dots */}
       <div className="absolute inset-0">
         {Array.from({ length: 50 }, (_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1.5 h-1.5 bg-white/60 rounded-full"
+            className="absolute w-1.5 h-1.5 bg-white/40 rounded-full"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
             }}
             animate={{
-              opacity: [0.4, 1, 0.4],
-              scale: [0.7, 1.3, 0.7],
+              opacity: [0.3, 0.7, 0.3],
+              scale: [0.7, 1.2, 0.7],
             }}
             transition={{
               duration: 3 + Math.random() * 2,
@@ -35,7 +35,7 @@ export function FuturisticBackground() {
         <motion.div
           className="absolute bottom-0 left-0 w-full h-full"
           initial={{ x: -100, opacity: 0 }}
-          animate={{ x: 0, opacity: 0.6 }}
+          animate={{ x: 0, opacity: 0.4 }}
           transition={{ duration: 2, delay: 0.5 }}
         >
           <svg
@@ -64,7 +64,7 @@ export function FuturisticBackground() {
         <motion.div
           className="absolute bottom-0 right-0 w-full h-full"
           initial={{ x: 100, opacity: 0 }}
-          animate={{ x: 0, opacity: 0.5 }}
+          animate={{ x: 0, opacity: 0.3 }}
           transition={{ duration: 2, delay: 0.8 }}
         >
           <svg
@@ -95,12 +95,12 @@ export function FuturisticBackground() {
         {Array.from({ length: 8 }, (_, i) => (
           <motion.div
             key={i}
-            className="absolute w-0.5 h-full bg-gradient-to-b from-transparent via-blue-500/60 to-transparent"
+            className="absolute w-0.5 h-full bg-gradient-to-b from-transparent via-blue-500/40 to-transparent"
             style={{
               left: `${10 + i * 12}%`,
             }}
             animate={{
-              opacity: [0, 1, 0],
+              opacity: [0, 0.7, 0],
             }}
             transition={{
               duration: 4,
@@ -115,7 +115,7 @@ export function FuturisticBackground() {
       <motion.div
         className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32"
         initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: 1, opacity: 0.3 }}
+        animate={{ scale: 1, opacity: 0.2 }}
         transition={{ duration: 2, delay: 1 }}
       >
         <div className="w-full h-full bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-3xl" />
@@ -126,7 +126,7 @@ export function FuturisticBackground() {
         {Array.from({ length: 12 }, (_, i) => (
           <motion.div
             key={i}
-            className="absolute w-3 h-3 bg-blue-500/70 rounded-sm"
+            className="absolute w-3 h-3 bg-blue-500/50 rounded-sm"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -145,14 +145,14 @@ export function FuturisticBackground() {
       </div>
 
       {/* Subtle grid pattern */}
-      <div className="absolute inset-0 opacity-15">
+      <div className="absolute inset-0 opacity-10">
         <div className="grid grid-cols-12 gap-4 h-full">
           {Array.from({ length: 144 }, (_, i) => (
             <motion.div
               key={i}
               className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-sm"
               initial={{ opacity: 0 }}
-              animate={{ opacity: [0, 0.6, 0] }}
+              animate={{ opacity: [0, 0.4, 0] }}
               transition={{
                 duration: 3,
                 delay: Math.random() * 2,
