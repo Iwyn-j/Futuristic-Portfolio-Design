@@ -28,8 +28,8 @@ const projects = [
       'Improved decision-making efficiency by 60% through interactive dashboards',
       'Generated comprehensive reports for strategic water planning initiatives'
     ],
-    duration: '2 months',
-    teamSize: 'Lead Developer & Consultant',
+    duration: '4 months',
+    teamSize: 'Developer & Consultant',
     image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1080&h=720&fit=crop&crop=center&auto=format&q=80',
     technologies: ['FastAPI', 'React 19.1.0', 'SQLite/SQLAlchemy', 'JWT Authentication', 'Chart.js', 'Leaflet Maps', 'Docker', 'Redis', 'Pandas', 'OpenAPI/Swagger', 'GeoJSON', 'XLSX/CSV Processing'],
     sector: 'Data Science',
@@ -80,7 +80,7 @@ const projects = [
       'Handled 500+ daily queries with 88% resolution rate',
       'Integrated with 15+ construction databases and APIs'
     ],
-    duration: '3 months',
+    duration: '2 months',
     teamSize: '3 developers',
     image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1080&h=720&fit=crop&crop=center&auto=format&q=80',
     technologies: ['Langchain', 'OpenAI API', 'Vector Database', 'Web Scraping', 'Semantic Search', 'FastAPI', 'PostgreSQL', 'Docker'],
@@ -106,8 +106,8 @@ const projects = [
       'Reduced false positive rate to less than 2%',
       'Generated real-time dashboards with sub-second latency'
     ],
-    duration: '6 months',
-    teamSize: '5 developers',
+    duration: '1 months',
+    teamSize: '1 developers',
     image: 'https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=1080&h=720&fit=crop&crop=center&auto=format&q=80',
     technologies: ['Python', 'Apache Kafka', 'MongoDB', 'Real-time Analytics', 'Data Visualization', 'Apache Spark', 'Redis', 'Grafana'],
     sector: 'Data Science',

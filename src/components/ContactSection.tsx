@@ -72,6 +72,13 @@ export function ContactSection() {
         throw new Error('EmailJS not configured. Please update the configuration in src/config/emailjs.ts');
       }
 
+      // Debug: Log the configuration (remove this after testing)
+      console.log('EmailJS Config:', {
+        serviceId: EMAILJS_CONFIG.SERVICE_ID,
+        templateId: EMAILJS_CONFIG.TEMPLATE_ID,
+        publicKey: EMAILJS_CONFIG.PUBLIC_KEY.substring(0, 8) + '...' // Only show first 8 chars for security
+      });
+
       // Prepare template parameters
       const templateParams: EmailTemplateParams = {
         from_name: `${formData.firstName} ${formData.lastName}`,
@@ -105,6 +112,10 @@ export function ContactSection() {
       }
     } catch (error) {
       console.error('Email sending failed:', error);
+      console.error('Error details:', {
+        message: error instanceof Error ? error.message : 'Unknown error',
+        stack: error instanceof Error ? error.stack : undefined
+      });
       setSubmitStatus('error');
       setErrorMessage(error instanceof Error ? error.message : 'An unexpected error occurred');
     } finally {

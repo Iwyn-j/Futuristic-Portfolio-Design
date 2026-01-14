@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'motion/react';
 import { Calendar, MapPin, ExternalLink } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
@@ -6,10 +7,27 @@ import { Badge } from './ui/badge';
 const experiences = [
   {
     id: 0,
+    company: 'Saudi Water Authority (SWA)',
+    position: 'Digital Transformation Specialist (Full-Time)',
+    location: 'Riyadh, Saudi Arabia',
+    duration: 'Jan 2026 - Present',
+    description: 'Driving end-to-end digital transformation initiatives across the Saudi Water Authority to optimize internal systems, reduce manual work, and enable data-driven decision making. Building and improving internal products, automation workflows, and dashboards that support water infrastructure planning and operational performance across 13 Saudi regions.',
+    technologies: ['FastAPI', 'React','Node.js', 'SQL/SQLAlchemy', 'Process Automation', 'Dashboards & BI', 'Chart.js', 'Leaflet Maps', 'Docker','CMS Development', 'Redis', 'Pandas', 'API Design', 'OpenAPI/Swagger','Python', 'SQL', 'Power BI','Tableau', 'DAX', 'Data Analytics', 'Process Automation'],
+    achievements: [
+      'Optimized internal workflows by replacing manual, spreadsheet-based processes with automated digital solutions',
+      'Designed and deployed interactive dashboards that give leadership real-time visibility into water operations and KPIs',
+      'Collaborated with cross-functional teams to gather requirements and translate them into internal products and tools',
+      'Implemented process automations (data pipelines, approvals, notifications) to reduce errors and accelerate decision-making',
+      'Improved data accessibility by centralizing key operational datasets and exposing them through secure APIs and dashboards',
+      'Supported water infrastructure planning by enhancing systems for monitoring, reporting, and regional performance analysis'
+    ]
+  },
+  {
+    id: 1,
     company: 'Flydubai',
     position: 'Data Analytics Intern – Internal Audit Department',
     location: 'Dubai, UAE',
-    duration: 'Sep 2025 – Present',
+    duration: 'Sep 2025 – Nov 2025',
     description: 'Built analytics solutions to support internal audit investigations and executive reporting. Automated ETL processes, centralized data from Oracle sources, and delivered stakeholder-ready dashboards that surfaced operational risks and financial gaps.',
     technologies: ['KNIME', 'Oracle SQL', 'Tableau', 'Python', 'ETL Pipelines', 'Data Modeling'],
     achievements: [
@@ -21,16 +39,16 @@ const experiences = [
     ]
   },
   {
-    id: 1,
+    id: 2,
     company: 'Saudi Water Authority (SWA)',
     position: 'Full-Stack Developer & Data Science Consultant',
     location: 'Riyadh, Saudi Arabia',
-    duration: 'Aug 2024 - Present',
-    description: 'Leading the development of SWIIMS (Saudi Water Infrastructure Information Management System), a comprehensive water infrastructure management and forecasting platform. Built full-stack web application with advanced water demand forecasting, infrastructure management, and real-time analytics for water distribution networks across 13 Saudi regions.',
+    duration: 'Aug 2024 - Nov 2025',
+    description: 'Consulted on the design and development of a comprehensive water infrastructure management and forecasting platform for Saudi regions. Built full-stack web capabilities with advanced water demand forecasting, infrastructure management, and real-time analytics for water distribution networks across 13 regions.',
     technologies: ['FastAPI', 'React 19.1.0', 'SQLite/SQLAlchemy', 'JWT Authentication', 'Chart.js', 'Leaflet Maps', 'Docker', 'Redis', 'Pandas', 'OpenAPI/Swagger'],
     achievements: [
       'Developed advanced water demand forecasting algorithms for 13 Saudi regions',
-      'Built comprehensive infrastructure management system for water networks',
+      'Built comprehensive infrastructure management system features for water networks',
       'Implemented real-time analytics dashboards with interactive data visualization',
       'Created scenario modeling capabilities for water planning and decision-making',
       'Designed role-based access control system with granular permissions',
@@ -38,7 +56,7 @@ const experiences = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     company: 'Estée Lauder Companies',
     position: 'Procurement Reporting Analytics Intern',
     location: 'Kuala Lumpur, Malaysia',
@@ -53,7 +71,7 @@ const experiences = [
     ]
   },
   {
-    id: 3,
+    id: 4,
     company: 'Cambridge Innovation Solutions (CIS)',
     position: 'Machine Learning and Full Stack Developer Intern',
     location: 'Remote',
@@ -68,7 +86,7 @@ const experiences = [
     ]
   },
   {
-    id: 4,
+    id: 5,
     company: 'Art Dubai',
     position: 'Digital Product Assistant',
     location: 'Dubai, UAE',
@@ -83,7 +101,7 @@ const experiences = [
     ]
   },
   {
-    id: 5,
+    id: 6,
     company: 'Art Dubai',
     position: 'App Assistant Trainee',
     location: 'Dubai, UAE',
@@ -193,7 +211,82 @@ export function ExperienceSection() {
                   </Card>
                 </div>
 
-                <div className="hidden md:block w-1/2"></div>
+                {index === 0 ? (
+                  // Freelance experience card displayed alongside current full-time role
+                  <div className="hidden md:block w-1/2">
+                    <Card className="hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-500 border border-border/50 hover:border-purple-500/30 rounded-xl backdrop-blur-sm">
+                      <CardHeader>
+                        <div className="flex items-start justify-between">
+                          <div>
+                            <CardTitle className="text-xl mb-1">
+                              Freelance Developer & Digital Transformation Consultant
+                            </CardTitle>
+                            <CardDescription className="text-lg font-medium text-blue-600 dark:text-blue-400 mb-2">
+                              Independent / Freelance
+                            </CardDescription>
+                          </div>
+                          <ExternalLink className="w-5 h-5 text-muted-foreground" />
+                        </div>
+
+                        <div className="flex items-center space-x-4 text-sm text-muted-foreground">
+                          <div className="flex items-center space-x-1">
+                            <Calendar className="w-4 h-4" />
+                            <span>Present</span>
+                          </div>
+                          <div className="flex items-center space-x-1">
+                            <MapPin className="w-4 h-4" />
+                            <span>Remote / Global Clients</span>
+                          </div>
+                        </div>
+                      </CardHeader>
+
+                      <CardContent>
+                        <p className="text-muted-foreground mb-4">
+                          Working simultaneously as a freelance consultant delivering website and software development
+                          tailored to client requirements, AI and data projects, digital transformation, and process
+                          optimization initiatives. Focused on modern web applications, internal tools, automation
+                          workflows, analytics dashboards, and intelligent assistants that reduce manual work and
+                          improve decision-making.
+                        </p>
+
+                        <div className="mb-4">
+                          <h4 className="font-medium mb-2">Key Focus Areas:</h4>
+                          <div className="flex flex-wrap gap-2">
+                            <Badge variant="secondary">Full-Stack Development</Badge>
+                            <Badge variant="secondary">Process Automation</Badge>
+                            <Badge variant="secondary">Dashboards & BI</Badge>
+                            <Badge variant="secondary">AI & Data Projects</Badge>
+                            <Badge variant="secondary">API Design</Badge>
+                            <Badge variant="secondary">Cloud & Deployment</Badge>
+                          </div>
+                        </div>
+
+                        <div>
+                          <h4 className="font-medium mb-2">Sample Outcomes:</h4>
+                          <ul className="space-y-1">
+                            <li className="text-sm text-muted-foreground flex items-start">
+                              <span className="text-blue-500 mr-2">•</span>
+                              Reduced manual reporting and data entry for clients by building automated workflows and
+                              scripts.
+                            </li>
+                            <li className="text-sm text-muted-foreground flex items-start">
+                              <span className="text-blue-500 mr-2">•</span>
+                              Developed internal tools and dashboards that gave founders and managers real-time
+                              visibility into key KPIs.
+                            </li>
+                            <li className="text-sm text-muted-foreground flex items-start">
+                              <span className="text-blue-500 mr-2">•</span>
+                              Advised on digital transformation roadmaps, tooling choices, and data strategy for early
+                              stage and growing teams.
+                            </li>
+                          </ul>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+                ) : (
+                  <div className="hidden md:block w-1/2"></div>
+                )}
               </motion.div>
             ))}
           </div>
