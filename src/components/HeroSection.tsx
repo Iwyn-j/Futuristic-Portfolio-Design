@@ -1,9 +1,10 @@
+import React from 'react';
 import { motion } from 'motion/react';
-import { ChevronDown, Github, Linkedin, Mail, MapPin, Calendar } from 'lucide-react';
+import { ChevronDown, Github, Linkedin, Mail, MapPin, Calendar, Phone } from 'lucide-react';
 import { Button } from './ui/button';
-import { ImageWithFallback } from './figma/ImageWithFallback';
-import profileImage from '@/assets/IMG_1041.JPG';
 import { FuturisticBackground } from './FuturisticBackground';
+
+const profileImage = '/IMG_1041.JPG';
 
 export function HeroSection() {
   const scrollToProjects = () => {
@@ -101,11 +102,19 @@ export function HeroSection() {
             >
               <div className="flex items-center justify-center lg:justify-start space-x-2 text-muted-foreground">
                 <MapPin className="w-4 h-4" />
-                <span className="text-sm">Sharjah, UAE</span>
+                <span className="text-sm">Dubai, UAE</span>
               </div>
               <div className="flex items-center justify-center lg:justify-start space-x-2 text-muted-foreground">
                 <Calendar className="w-4 h-4" />
-                <span className="text-sm">UAE Golden Visa Holder</span>
+                <span className="text-sm">UAE & Saudi Arabia Resident</span>
+              </div>
+              <div className="flex items-center justify-center lg:justify-start space-x-2 text-muted-foreground">
+                <Mail className="w-4 h-4" />
+                <span className="text-sm">Iwyn2002@gmail.com</span>
+              </div>
+              <div className="flex items-center justify-center lg:justify-start space-x-2 text-muted-foreground">
+                <Phone className="w-4 h-4" />
+                <span className="text-sm">+971 55 433 9054 / +966 50 266 7268</span>
               </div>
             </motion.div>
           </motion.div>
@@ -144,7 +153,7 @@ export function HeroSection() {
               transition={{ delay: 0.35, duration: 0.4 }}
               className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-6 text-foreground/90 text-center lg:text-left"
             >
-              Data Driven Developer
+              Data Science, Developer & Digital Transformation
             </motion.h2>
 
             {/* Description */}
@@ -179,46 +188,58 @@ export function HeroSection() {
                 onClick={downloadCV}
                 className="w-full sm:w-auto h-12 px-8 border-2 hover:bg-accent/50 transition-all duration-300"
               >
-                Download CV
-              </Button>
-              {/* Direct PDF link for mobile */}
-              <a 
-                href="https://drive.google.com/file/d/1h1mqZr4qqgXlFGZU7TgyeA8bacBpja4i/view?usp=sharing" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="sm:hidden w-full h-12 px-8 border-2 border-border hover:bg-accent/50 transition-all duration-300 rounded-lg flex items-center justify-center text-sm font-medium"
-              >
                 View CV
-              </a>
+              </Button>
+              <Button 
+                variant="secondary"
+                size="lg"
+                asChild
+                className="w-full sm:w-auto h-12 px-8 border-2 border-border hover:border-blue-500/60 hover:bg-accent/40 transition-all duration-300"
+              >
+                <a 
+                  href="https://www.linkedin.com/in/iwyn-joseph-5a5768258/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  View LinkedIn
+                </a>
+              </Button>
             </motion.div>
 
-            {/* Social Links */}
+            {/* Availability Badge – below primary actions */}
             <motion.div
-              initial={{ opacity: 0, y: 8 }}
+              initial={{ opacity: 0, y: 6 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 0.35 }}
-              className="flex items-center justify-center lg:justify-start space-x-4"
+              transition={{ delay: 0.55, duration: 0.35 }}
+              className="flex justify-center lg:justify-start"
             >
-              {[
-                { icon: Github, href: "#", label: "GitHub" },
-                { icon: Linkedin, href: "#", label: "LinkedIn" },
-                { icon: Mail, href: "mailto:Iwyn2002@gmail.com", label: "Email" }
-              ].map((social, index) => {
-                const Icon = social.icon;
-                return (
-                  <motion.a
-                    key={social.label}
-                    href={social.href}
-                    aria-label={social.label}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 0.55 + index * 0.08, duration: 0.25 }}
-                    className="p-3 rounded-xl bg-accent/50 hover:bg-accent transition-all duration-300 group"
-                  >
-                    <Icon className="w-6 h-6 group-hover:text-primary transition-colors" />
-                  </motion.a>
-                );
-              })}
+              <div
+                className="w-full sm:w-auto max-w-md inline-flex items-center gap-3 rounded-xl px-4 py-3"
+                style={{
+                  border: '1px solid rgba(52, 211, 153, 0.45)',
+                  background:
+                    'linear-gradient(90deg, rgba(16,185,129,0.16) 0%, rgba(20,184,166,0.10) 55%, rgba(6,182,212,0.12) 100%)',
+                  boxShadow: '0 10px 26px rgba(16,185,129,0.20)',
+                  backdropFilter: 'blur(10px)',
+                }}
+              >
+                <span
+                  className="h-2.5 w-2.5 rounded-full"
+                  style={{
+                    background: 'rgb(110, 231, 183)',
+                    boxShadow: '0 0 0 3px rgba(16,185,129,0.28)',
+                    animation: 'pulse 1.6s ease-in-out infinite',
+                  }}
+                />
+                <div className="flex flex-col text-left">
+                  <span className="text-xs font-semibold uppercase tracking-wide text-white/95">
+                    Available for Work
+                  </span>
+                  <span className="text-xs text-white/75">
+                    Open to new opportunities and freelance projects
+                  </span>
+                </div>
+              </div>
             </motion.div>
           </motion.div>
         </div>
@@ -228,7 +249,7 @@ export function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7, duration: 0.4 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-2 left-1/2 transform -translate-x-1/2 z-20"
         >
           <motion.div
             animate={{ y: [0, 6, 0] }}

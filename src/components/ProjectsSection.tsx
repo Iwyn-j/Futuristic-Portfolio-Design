@@ -6,14 +6,14 @@ import { Badge } from './ui/badge';
 import { Button } from './ui/button';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
-const sectors = ['All', 'Web Development', 'Machine Learning', 'Data Science', 'Mobile Development'];
+const sectors = ['All', 'Web Development', 'Machine Learning', 'Data Science'];
 
 const projects = [
   {
     id: 1,
-    title: 'SWIIMS - Saudi Water Infrastructure Information Management System',
+    title: 'Infrastructure Information Management System',
     description: 'Comprehensive water infrastructure management and forecasting platform for the Saudi Water Authority. Full-stack web application providing advanced water demand forecasting, infrastructure management, scenario modeling, and real-time analytics for water distribution networks across 13 Saudi regions.',
-    detailedDescription: 'SWIIMS is a mission-critical enterprise system designed to revolutionize water infrastructure management in Saudi Arabia. The platform integrates advanced data science algorithms with modern web technologies to provide comprehensive water demand forecasting, infrastructure asset management, and scenario planning capabilities. The system serves as the central hub for water authorities to make data-driven decisions about water distribution, infrastructure investments, and resource planning.',
+    detailedDescription: 'The software is a mission-critical enterprise system designed to revolutionize water infrastructure management in Saudi Arabia. The platform integrates advanced data science algorithms with modern web technologies to provide comprehensive water demand forecasting, infrastructure asset management, and scenario planning capabilities. The system serves as the central hub for water authorities to make data-driven decisions about water distribution, infrastructure investments, and resource planning.',
     challenges: [
       'Processing large-scale geographic and temporal water data across 13 regions',
       'Implementing real-time analytics with sub-second response times',

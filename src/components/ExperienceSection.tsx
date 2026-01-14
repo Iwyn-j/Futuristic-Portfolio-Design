@@ -12,7 +12,7 @@ const experiences = [
     location: 'Riyadh, Saudi Arabia',
     duration: 'Jan 2026 - Present',
     description: 'Driving end-to-end digital transformation initiatives across the Saudi Water Authority to optimize internal systems, reduce manual work, and enable data-driven decision making. Building and improving internal products, automation workflows, and dashboards that support water infrastructure planning and operational performance across 13 Saudi regions.',
-    technologies: ['FastAPI', 'React','Node.js', 'SQL/SQLAlchemy', 'Process Automation', 'Dashboards & BI', 'Chart.js', 'Leaflet Maps', 'Docker','CMS Development', 'Redis', 'Pandas', 'API Design', 'OpenAPI/Swagger','Python', 'SQL', 'Power BI','Tableau', 'DAX', 'Data Analytics', 'Process Automation'],
+    technologies: ['FastAPI', 'React','Node.js', 'SQL/SQLAlchemy', 'Process Automation', 'Dashboards & BI', 'Chart.js', 'Leaflet Maps', 'Docker','CMS Development', 'Redis', 'Pandas', 'API Design', 'OpenAPI/Swagger','Python', 'SQL', 'Power BI','Tableau', 'DAX', 'Data Analytics'],
     achievements: [
       'Optimized internal workflows by replacing manual, spreadsheet-based processes with automated digital solutions',
       'Designed and deployed interactive dashboards that give leadership real-time visibility into water operations and KPIs',
