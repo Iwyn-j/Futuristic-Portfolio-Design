@@ -51,6 +51,22 @@ export function HeroSection() {
     }
   };
 
+  // Track mobile viewport on client to conditionally render contact details
+  const [isMobile, setIsMobile] = React.useState<boolean>(() =>
+    typeof window !== 'undefined' ? window.innerWidth < 640 : false
+  );
+
+  React.useEffect(() => {
+    function onResize() {
+      setIsMobile(window.innerWidth < 640);
+    }
+
+    window.addEventListener('resize', onResize);
+    // run once to initialize
+    onResize();
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
+
   return (
     <section id="hero" className="min-h-screen scroll-mt-20 sm:scroll-mt-24 flex items-center justify-center relative overflow-hidden">
       {/* Futuristic Background */}
@@ -100,22 +116,30 @@ export function HeroSection() {
               transition={{ delay: 0.4, duration: 0.4 }}
               className="flex flex-col space-y-2 text-center lg:text-left"
             >
-              <div className="flex items-center justify-center lg:justify-start space-x-2 text-muted-foreground">
-                <MapPin className="w-4 h-4" />
-                <span className="text-sm">Dubai, UAE</span>
-              </div>
-              <div className="flex items-center justify-center lg:justify-start space-x-2 text-muted-foreground">
-                <Calendar className="w-4 h-4" />
-                <span className="text-sm">UAE & Saudi Arabia Resident</span>
-              </div>
-              <div className="flex items-center justify-center lg:justify-start space-x-2 text-muted-foreground">
-                <Mail className="w-4 h-4" />
-                <span className="text-sm">Iwyn2002@gmail.com</span>
-              </div>
-              <div className="flex items-center justify-center lg:justify-start space-x-2 text-muted-foreground">
-                <Phone className="w-4 h-4" />
-                <span className="text-sm">+971 55 433 9054 / +966 50 266 7268</span>
-              </div>
+              {!isMobile && (
+                <div className="flex items-center justify-center lg:justify-start space-x-2 text-muted-foreground">
+                  <MapPin className="w-4 h-4" />
+                  <span className="text-sm">Dubai, UAE</span>
+                </div>
+              )}
+              {!isMobile && (
+                <div className="flex items-center justify-center lg:justify-start space-x-2 text-muted-foreground">
+                  <Calendar className="w-4 h-4" />
+                  <span className="text-sm">UAE & Saudi Arabia Resident</span>
+                </div>
+              )}
+              {!isMobile && (
+                <div className="flex items-center justify-center lg:justify-start space-x-2 text-muted-foreground">
+                  <Mail className="w-4 h-4" />
+                  <span className="text-sm">Iwyn2002@gmail.com</span>
+                </div>
+              )}
+              {!isMobile && (
+                <div className="flex items-center justify-center lg:justify-start space-x-2 text-muted-foreground">
+                  <Phone className="w-4 h-4" />
+                  <span className="text-sm">+971 55 433 9054 / +966 50 266 7268</span>
+                </div>
+              )}
             </motion.div>
           </motion.div>
 
